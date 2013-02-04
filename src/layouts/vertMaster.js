@@ -1,5 +1,3 @@
-// var _     = require('underscore');
-
 exports = function(screen, winCount, masterCount, masterFrac) {
 	var positions = [],
 		masterWidth = (screen.width * masterFrac),
