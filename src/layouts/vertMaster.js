@@ -1,4 +1,4 @@
-exports = function(screen, winCount, masterCount, masterFrac) {
+module.exports = function(screen, winCount, masterCount, masterFrac) {
 	var positions = [],
 		masterWidth = (screen.width * masterFrac),
 		regularWidth = (screen.width - masterWidth),
@@ -10,6 +10,7 @@ exports = function(screen, winCount, masterCount, masterFrac) {
 	for (i = 0; i < winCount; i++) {
 		// Masters
 		for (j = 0; j < masterCount; j++) {
+			// (j * height): windows are incrementally placed below each other
 			positions.push({
 				x: 0,
 				y: (j * masterHeight),

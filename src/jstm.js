@@ -1,7 +1,12 @@
+var layouts = {
+	vertMaster: require('layouts/vertMaster')
+};
+
 (function(slate, _) {
 	'use strict';
 
 	var percent  = function(n) { return (1.0/100.0)*n; };
+
 	// Really dislike having this magic data
 	var ratios = {
 		1920: percent(56),
@@ -143,4 +148,5 @@
 			position({master: false, split: 'horz', mirrored: true}),
 		'3:alt': position()
 	});
+
 })(slate, _);
